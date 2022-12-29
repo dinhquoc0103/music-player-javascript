@@ -142,7 +142,7 @@ const musicPlayerApp = {
         randomSongBtn.classList.toggle("active", this.isRandom);
         volumeIcon.classList.toggle("active", this.config.isMuted);
         volume.value = this.isMuted === true ? 0 : this.currentVolume * 100;
-        audio.volume = this.currentVolume;
+        audio.volume = this.isMuted === true ? 0 : this.currentVolume;
         
     },
     
@@ -296,9 +296,8 @@ const musicPlayerApp = {
         // Handle click mute/on volume
         volumeIcon.onclick = function() {
             _this.isMuted = !_this.isMuted;
-
+            
             if(_this.isMuted){
-                _this.currentVolume = 0;
                 audio.volume = 0;
                 volume.value = 0;
             }
@@ -310,7 +309,6 @@ const musicPlayerApp = {
 
             volumeIcon.classList.toggle("active", _this.isMuted);
             _this.setConfig("isMuted", _this.isMuted);
-            _this.setConfig("currentVolume", _this.currentVolume);
         }
     },
 
