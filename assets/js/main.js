@@ -298,6 +298,7 @@ const musicPlayerApp = {
             _this.isMuted = !_this.isMuted;
 
             if(_this.isMuted){
+                _this.currentVolume = 0;
                 audio.volume = 0;
                 volume.value = 0;
             }
@@ -309,6 +310,7 @@ const musicPlayerApp = {
 
             volumeIcon.classList.toggle("active", _this.isMuted);
             _this.setConfig("isMuted", _this.isMuted);
+            _this.setConfig("currentVolume", _this.currentVolume);
         }
     },
 
