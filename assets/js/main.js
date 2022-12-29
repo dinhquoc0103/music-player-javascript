@@ -330,7 +330,8 @@ const musicPlayerApp = {
         cdThumb.style.backgroundImage = `url('${this.currentSong.image}')`;;
         var path = './assets/music/anyone - Justin Bieber.mp3';
         // Update encoded src because song name has space. Audio Object do not understand.
-        audio.src = encodeURIComponent(this.currentSong.path);
+        // audio.src = encodeURIComponent(this.currentSong.path);
+        audio.src = this.currentSong.path
         audio.onloadedmetadata = function() {
             durationTime.innerText = musicPlayerApp.timeFormat(audio.duration);
         };
