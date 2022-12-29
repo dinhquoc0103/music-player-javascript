@@ -29,7 +29,7 @@ const songs = [
     {
         name: "Angels Speak",
         singer: "Justin Bieber feat Poo Bear",
-        path: "./assets/music/angels speak ft Poo Bear - Justin Bieber.mp3",
+        path: "./assets/music/angels.mp3",
         image: "./assets/img/angels speak ft Poo Bear - Justin Bieber.webp"
     },
     {
