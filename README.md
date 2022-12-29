@@ -2,7 +2,7 @@
 Functions:
  - 1. Render song
  - 2. Scroll top
- - 3. Play / pause (dừng) / seek (tua)
+ - 3. Play / pause (dừng) / seek
  - 4. CD rotate
  - 5. Next / prev
  - 6. Random
