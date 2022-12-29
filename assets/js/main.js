@@ -1,4 +1,3 @@
- 
 const $ = document.querySelector.bind(document);
 const $$ = document.querySelectorAll.bind(document);
 
@@ -29,7 +28,7 @@ const songs = [
     {
         name: "Angels Speak",
         singer: "Justin Bieber feat Poo Bear",
-        path: "./assets/music/angels.mp3",
+        path: "./assets/music/angels speak ft Poo Bear - Justin Bieber.mp3",
         image: "./assets/img/angels speak ft Poo Bear - Justin Bieber.webp"
     },
     {
@@ -330,8 +329,8 @@ const musicPlayerApp = {
         cdThumb.style.backgroundImage = `url('${this.currentSong.image}')`;;
         var path = './assets/music/anyone - Justin Bieber.mp3';
         // Update encoded src because song name has space. Audio Object do not understand.
+        audio.src = this.currentSong.path;
         // audio.src = encodeURIComponent(this.currentSong.path);
-        audio.src = this.currentSong.path
         audio.onloadedmetadata = function() {
             durationTime.innerText = musicPlayerApp.timeFormat(audio.duration);
         };
