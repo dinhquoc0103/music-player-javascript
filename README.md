@@ -12,3 +12,5 @@ Functions:
  - 10. Play song when click
  - 11. Volume change
  - 12. Turn on/off volume
+## Deploy to vercel
+https://music-player-using-javascript-dinhquoc0103.vercel.app/
