@@ -12,6 +12,7 @@ const nextSongBtn = $(".control .btn-next");
 const prevSongBtn = $(".control .btn-prev");
 const repeatSongBtn = $(".control .btn-repeat");
 const randomSongBtn = $(".control .btn-random");
+const volumeControl = $(".volume-control");
 const volumeIcon = $(".volume-on-off");
 const volumeUpBtn = $(".volume-on-off .btn-volume-up");
 const volumeMuteBtn = $(".volume-on-off .btn-volume-mute");
@@ -97,6 +98,8 @@ const musicPlayerApp = {
     startApp: function () {
 
         this.loadConfig();
+
+        this.handleWhenDetectMobileBrowser();
 
         this.defineProperties();
 
@@ -423,6 +426,13 @@ const musicPlayerApp = {
         }
         return result;
     },
+
+    handleWhenDetectMobileBrowser: function () {
+        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+            volumeControl.style.display = "none";
+            playlist.style.marginTop = "436px";
+        }      
+    }
 
 }
 
